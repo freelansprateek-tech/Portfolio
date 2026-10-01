@@ -211,7 +211,14 @@
   <div class="wrap">
     <p class="mono">That's all for now.</p>
     <h2>Got a product problem? Let's talk</h2>
-    <div class="rule"><a class="blob" href="mailto:prateek2033@gmail.com">Get in touch</a></div>
+    <div class="rule">
+      <button class="blob" id="contactBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="contactMenu">Get in touch</button>
+      <div class="contact-menu" id="contactMenu" hidden>
+        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=prateek2033@gmail.com&amp;su=Hello%20Prateek" target="_blank" rel="noopener">Open in Gmail <span>↗</span></a>
+        <a href="mailto:prateek2033@gmail.com?subject=Hello%20Prateek">Open mail app <span>↗</span></a>
+        <button type="button" id="menuCopy">Copy email <span>⧉</span></button>
+      </div>
+    </div>
     <div class="contact-meta">
       <div><span class="mono">Email</span><span><span class="v" id="email">prateek2033@gmail.com</span><button class="copy" id="copyEmail" type="button">Copy</button></span></div>
       <div><span class="mono">Phone</span><span class="v">+91 93354 45175</span></div>

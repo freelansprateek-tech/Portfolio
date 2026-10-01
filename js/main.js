@@ -65,6 +65,20 @@ document.querySelectorAll(".card").forEach(b => b.addEventListener("click", () =
 el("dlgClose").addEventListener("click", () => dlg.close());
 dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
 
+/* Get in touch menu: Gmail / mail app / copy */
+const contactBtn = el("contactBtn"), contactMenu = el("contactMenu");
+function setMenu(open){ contactMenu.hidden = !open; contactBtn.setAttribute("aria-expanded", open); }
+contactBtn.addEventListener("click", e => { e.stopPropagation(); setMenu(contactMenu.hidden); });
+document.addEventListener("click", e => { if (!contactMenu.contains(e.target)) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+contactMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+el("menuCopy").addEventListener("click", async () => {
+  const b = el("menuCopy");
+  try { await navigator.clipboard.writeText("prateek2033@gmail.com"); b.firstChild.textContent = "Copied! "; }
+  catch { b.firstChild.textContent = "prateek2033@gmail.com "; }
+  setTimeout(() => { b.firstChild.textContent = "Copy email "; setMenu(false); }, 1400);
+});
+
 el("copyEmail").addEventListener("click", async () => {
   const btn = el("copyEmail");
   try { await navigator.clipboard.writeText(el("email").textContent); btn.textContent = "Copied"; }
