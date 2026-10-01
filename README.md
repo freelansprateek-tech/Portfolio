@@ -64,3 +64,4 @@ In VS Code you can also install the **Live Server** extension, right-click `inde
 
 ---
 © 2026 Prateek Kumar Chandra
+# Portfolio
