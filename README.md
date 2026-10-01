@@ -3,7 +3,7 @@
 Personal portfolio website of **Prateek Kumar Chandra**, aspiring **AI Product Manager**.
 It presents my product thinking, AI fluency, case studies and experience in a clean, uncluttered layout.
 
-🔗 **Live site:** https://freelansprateek-tech.github.io  <!-- update if you use a different repo name -->
+🔗 **Live site:** https://freelansprateek-tech.github.io/Portfolio/
 
 ## Sections
 
@@ -64,4 +64,3 @@ In VS Code you can also install the **Live Server** extension, right-click `inde
 
 ---
 © 2026 Prateek Kumar Chandra
-# Portfolio
